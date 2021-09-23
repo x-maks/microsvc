@@ -21,7 +21,7 @@ import javax.validation.Valid;
 public class DocumentController {
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public DocResponse create(@Valid @RequestBody DocumentCrpt document, BindingResult result) {
+    public DocResponse create(@Valid @RequestBody DocumentCrpt document) {
 
         return new DocResponse(HttpStatus.CREATED);
     }
